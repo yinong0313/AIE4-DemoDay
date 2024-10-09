@@ -47,7 +47,7 @@ class PubMedSearchInput(BaseModel):
     #max_results: int = 5
 
 # PubMed search tool using Entrez (now with structured inputs)
-def pubmed_search(query: str, max_results: int = 3):
+def pubmed_search(query: str, max_results: int = 5):
     """Search PubMed using Entrez API and return abstracts."""
     handle = Entrez.esearch(db="pubmed", term=query, retmax=max_results)
     record = Entrez.read(handle)
