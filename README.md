@@ -1,2 +1,10 @@
-# AIE4 Final Demo Day App
-Literature Review App
+---
+title: Literature Review App
+emoji: 🐠
+colorFrom: gray
+colorTo: pink
+sdk: docker
+pinned: false
+---
+
+Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
