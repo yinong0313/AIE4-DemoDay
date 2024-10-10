@@ -1,0 +1,17 @@
+The detailed summaries of the two papers are as follows:
+
+**Paper 1: Tele-Mental Health Service: Unveiling the Disparity and Impact on Healthcare Access and Expenditures during the COVID-19 Pandemic in Mississippi**
+
+The study investigates the role of tele-mental health (TMH) services during the COVID-19 pandemic in Mississippi, revealing significant disparities in access and the impact on healthcare utilization and expenses. A cohort of 6,787 adult patients insured by the University of Mississippi Medical Center was analyzed, with 3,065 utilizing TMH services from January 2020 to June 2023. The TMH users predominantly included younger, female, White/Caucasian individuals, particularly from rural areas with higher income levels[1].
+
+Findings indicated a substantial increase in mental health-related outpatient visits (190%) and related medical expenditures (17%) due to TMH utilization. Conversely, there was a notable decrease in all-cause medical expenditures by 12%, suggesting cost-effectiveness in managing mental health needs remotely. Rural residents experienced even greater benefits, with a 205% increase in outpatient visits and a 19% reduction in overall medical costs. The study highlights the necessity of addressing sociodemographic disparities to enhance access to TMH and reduce healthcare costs comprehensively[1].
+
+**Paper 2: Double Trouble: COVID-19 Infection Exacerbates Sickle Cell Crisis Outcomes in Hospitalized Patients—Insights from National Inpatient Sample 2020**
+
+This research explores the exacerbated outcomes of sickle cell crisis (SCC) in patients also diagnosed with COVID-19. Utilizing the National Inpatient Sample data from 2020, the study reveals that SCC patients co-infected with COVID-19 experienced significantly higher mortality rates (2.28% vs. 0.33%), more complications such as acute respiratory failure and acute kidney injury, longer hospital stays, and increased hospital charges[2]. The findings underscore the critical need for enhanced medical care for SCC patients with COVID-19 and the importance of preventive strategies to protect this vulnerable group from severe outcomes[2].
+
+### Citation List
+
+[1] "Tele-Mental Health Service: Unveiling the Disparity and Impact on Healthcare Access and Expenditures during the COVID-19 Pandemic in Mississippi."
+
+[2] "Double Trouble: COVID-19 Infection Exacerbates Sickle Cell Crisis Outcomes in Hospitalized Patients—Insights from National Inpatient Sample 2020."
