@@ -11,3 +11,5 @@ RAG_LLM = ChatOpenAI(
     model="gpt-4o-mini",
     temperature=0
 )
+
+REASONING_LLM = ChatOpenAI(model="gpt-3.5-turbo")

@@ -72,10 +72,6 @@ class ChunkDocument(Chunking):
         return chunks
 
 
-
-
-
-
 def get_vector_store(documents: List, embedding_model: HuggingFaceEmbeddings, emb_dim: int, collection_name: str) -> QdrantVectorStore:
     '''
     Return a qdrant vector score retriever
