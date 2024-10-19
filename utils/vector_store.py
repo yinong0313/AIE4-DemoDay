@@ -11,6 +11,9 @@ from qdrant_client.http.models import Distance, VectorParams
 from langchain_huggingface import HuggingFaceEmbeddings
 from typing import List
 from abc import ABC, abstractmethod
+import re
+
+import pymupdf4llm
 
 def tiktoken_len(text):
     tokens = tiktoken.encoding_for_model("gpt-4o-mini").encode(text)

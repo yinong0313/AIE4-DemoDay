@@ -20,3 +20,4 @@ def create_rag_chain(rag_prompt_template, vector_store, llm):
                     | RunnablePassthrough.assign(context=itemgetter("context"))
                     | {"response": rag_prompt_template | llm | StrOutputParser(), "context": itemgetter("context")})
     return rag_chain
+

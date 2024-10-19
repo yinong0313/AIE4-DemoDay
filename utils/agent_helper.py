@@ -1,5 +1,6 @@
-from typing import Any, Callable, List, Optional, TypedDict, Union
+from typing import Any, Callable, List, Optional, TypedDict, Union, Annotated
 import functools
+import operator
 
 from langchain.agents import AgentExecutor, create_openai_functions_agent
 from langchain.output_parsers.openai_functions import JsonOutputFunctionsParser
@@ -19,7 +20,7 @@ def agent_node(state, agent, name):
 def retrieve_information(
     query: Annotated[str, "query to ask the retrieve information tool"]
     ):
-  """Use Retrieval Augmented Generation to retrieve information about the 'Extending Llama-3’s Context Ten-Fold Overnight' paper."""
+  """Use Retrieval Augmented Generation to retrieve information about the provided documents."""
   return rag_chain.invoke({"question" : query})
 
 
