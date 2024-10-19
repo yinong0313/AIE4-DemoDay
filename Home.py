@@ -1,25 +1,15 @@
 import streamlit as st
 
-st.set_page_config(
-    page_title="Hello",
-    page_icon="👋",
-)
+# Global storage for API key using session state
+if "api_key" not in st.session_state:
+    st.session_state["open_api_key"] = None
 
-st.write("# Welcome! 👋")
+st.title("Welcome to Research Pilot")
 
-st.sidebar.success("Select a demo above.")
+# API Key input on the welcome page
+openai_api_key = st.text_input("Enter your OpenAI API Key to proceed:", type="password")
+"[Get an OpenAI API key](https://platform.openai.com/account/api-keys)"
 
-st.markdown(
-    """
-    O Canada!  
-    Our home and native land!  
-    True patriot love in all of us command.  
-    With glowing hearts we see thee rise,  
-    The True North strong and free!  
-    From far and wide,  
-    O Canada, we stand on guard for thee.  
-    God keep our land glorious and free!  
-    O Canada, we stand on guard for thee.  
-    O Canada, we stand on guard for thee.  
-"""
-)
+if openai_api_key:
+    st.session_state["open_api_key"] = openai_api_key
+    st.success("API key received!")

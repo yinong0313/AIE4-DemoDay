@@ -1,3 +1,5 @@
+############### prompts for analysis ##############
+
 TEXTBOOK_RAG_PROMPT = """\n"You are a research assistant who can provide specific information on the book 'Textbook of Diabetes". You must only respond with information about those documents related to the request. Make sure every documents are covered."
 
 Context:
@@ -24,7 +26,6 @@ RESEARCH_AGENT_PROMPT = """You are a research assistant who can provide specific
 
 QUERY_AGENT_PROMPT = """You are a research assistant who can search for the most relevant and up-to-date research paper using the semantic query tool."""
 
-
 SUPERVISOR_PROMPT = ("You are a supervisor tasked with managing a conversation between the"
     " following workers:  InformationRetriever and PaperInformationRetriever. Given the following user request,"
     " determine the subject to be researched and respond with the worker to act next. Each worker will perform a"
@@ -33,6 +34,8 @@ SUPERVISOR_PROMPT = ("You are a supervisor tasked with managing a conversation b
     " You should only pass tasks to workers that are specifically research focused."
     " Ask maximum four requests. Make sure each workers are called at least once."
     " When finished, respond with FINISH.")
+
+############### prompts for pubmed search #################
 
 PUBMED_SYSTEM_MESSAGE = """Please execute the following steps in sequence:
     1. Use the PubMed search tool to search for papers.
@@ -44,3 +47,13 @@ PUBMED_SYSTEM_MESSAGE = """Please execute the following steps in sequence:
     The user will provide the search query, screening criteria, and the query for information extraction.
     Make sure you finish everything in one step before moving on to next step.
     Do not call more than one tool in one action."""
+    
+PUBMED_TOOL_PROMPT = "Search PubMed for research papers and retrieve abstracts. Pass the abstracts (returned results) to another tool."
+
+SEMANTIC_SCREENING_PROMPT = """Screen PubMed abstracts based on semantic similarity to inclusion/exclusion criteria. Uses cosine similarity between abstracts and criteria. Requires 'abstracts' and 'screening criteria' as input.
+    The 'abstracts' is a list of dictionary with keys as PMID, Title, Abstract.
+    Output a similarity scores for each abstract and send the list of pmids that passed the screening to Fetch_Extract_Tool."""
+
+PUMBED_RAG_PROMPT = """Fetch full-text articles based on PMIDs and store them in a Qdrant vector database.
+    Then extract information based on user's query via Qdrant retriever using a RAG pipeline.
+    Requires list of PMIDs and user query as input."""

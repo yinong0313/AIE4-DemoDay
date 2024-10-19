@@ -4,6 +4,8 @@ import xml.etree.ElementTree as ET
 from pydantic import BaseModel
 from langgraph.graph.message import add_messages
 from langgraph.graph import END
+from langgraph.prebuilt import ToolNode
+from langgraph.graph import StateGraph
 
 from langchain_qdrant import QdrantVectorStore
 from qdrant_client import QdrantClient
@@ -13,6 +15,7 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.chains import ConversationalRetrievalChain
 from langchain.docstore.document import Document
 from langchain.memory import ChatMessageHistory, ConversationBufferMemory
+from langchain.tools import StructuredTool
 
 from sentence_transformers import util
 
@@ -20,8 +23,9 @@ from typing import List, Annotated
 import uuid
 
 from utils.models import RAG_LLM, SEMANTIC_MODEL as semantic_model, EMBEDDING_MODEL as embedding_model
+from utils.prompts import PUBMED_TOOL_PROMPT, SEMANTIC_SCREENING_PROMPT, PUMBED_RAG_PROMPT
 
-# 1. Define PubMed Search Tool
+# Define PubMed Search Tool
 class PubMedSearchInput(BaseModel):
     query: str
     #max_results: int = 5
@@ -86,7 +90,7 @@ def screen_abstracts_semantic(abstracts: List[dict], criteria: str, similarity_t
     
     return screened
 
-# 3. Define Full-Text Retrieval Tool
+# Define Full-Text Retrieval Tool
 class FetchExtractInput(BaseModel):
     pmids: List[str]  # List of PubMed IDs to fetch full text for
     query: str
@@ -263,6 +267,33 @@ def fetch_and_extract(pmids: List[str], query: str):
     # Return consolidated results for all papers
     return consolidated_results
 
+# Build tools
+def get_tool_belt():
+    # PubMed Search Tool
+    pubmed_tool = StructuredTool(
+        name="PubMed_Search_Tool",
+        func=pubmed_search,
+        description=PUBMED_TOOL_PROMPT,
+        args_schema=PubMedSearchInput
+        )
+
+    # Abstract Screening Tool
+    semantic_screening_tool = StructuredTool(
+        name="Semantic_Abstract_Screening_Tool",
+        func=screen_abstracts_semantic,
+        description=SEMANTIC_SCREENING_PROMPT,
+        args_schema=AbstractScreeningInput
+    )
+
+    # RAG tool
+    rag_tool = StructuredTool(
+        name="Fetch_Extract_Tool",
+        func=fetch_and_extract,
+        description=PUMBED_RAG_PROMPT,
+        args_schema=FetchExtractInput
+        )
+    return [pubmed_tool, semantic_screening_tool, rag_tool]
+
 
 # Agent state to handle the messages
 class AgentState(dict):
@@ -283,3 +314,29 @@ def should_continue(state):
         return "action"
     
     return END
+
+def compile_pubmed_search_graph(model):
+    
+    tool_belt = get_tool_belt()
+    tool_node = ToolNode(tool_belt)
+    model = model.bind_tools(tool_belt)
+    def call_model(state):
+        messages = state["messages"]
+        response = model.invoke(messages)
+        return {"messages": [response], "cycle_count": state["cycle_count"] + 1}  # Increment cycle count
+    
+    # Create the state graph for managing the flow between the agent and tools
+    uncompiled_graph = StateGraph(AgentState)
+    uncompiled_graph.add_node("agent", call_model)
+    uncompiled_graph.add_node("action", tool_node)
+
+    # Set the entry point for the graph
+    uncompiled_graph.set_entry_point("agent")
+
+    # Add conditional edges for the agent to action
+    uncompiled_graph.add_conditional_edges("agent", should_continue)
+    uncompiled_graph.add_edge("action", "agent")
+
+    # Compile the state graph
+    compiled_graph = uncompiled_graph.compile()
+    return compiled_graph
