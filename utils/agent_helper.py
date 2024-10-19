@@ -1,27 +1,17 @@
-from typing import Any, Callable, List, Optional, TypedDict, Union, Annotated
-import functools
+from typing import List, TypedDict, Annotated
 import operator
 
 from langchain.agents import AgentExecutor, create_openai_functions_agent
 from langchain.output_parsers.openai_functions import JsonOutputFunctionsParser
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_core.messages import AIMessage, BaseMessage, HumanMessage
-from langchain_core.runnables import Runnable
-from langchain_core.tools import BaseTool, tool
+
 from langchain_openai import ChatOpenAI
 
-from langgraph.graph import END, StateGraph
 
 def agent_node(state, agent, name):
     result = agent.invoke(state)
     return {"messages": [HumanMessage(content=result["output"], name=name)]}
-
-@tool
-def retrieve_information(
-    query: Annotated[str, "query to ask the retrieve information tool"]
-    ):
-  """Use Retrieval Augmented Generation to retrieve information about the provided documents."""
-  return rag_chain.invoke({"question" : query})
 
 
 def create_agent(
