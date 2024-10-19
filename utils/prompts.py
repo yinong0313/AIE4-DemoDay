@@ -33,3 +33,14 @@ SUPERVISOR_PROMPT = ("You are a supervisor tasked with managing a conversation b
     " You should only pass tasks to workers that are specifically research focused."
     " Ask maximum four requests. Make sure each workers are called at least once."
     " When finished, respond with FINISH.")
+
+PUBMED_SYSTEM_MESSAGE = """Please execute the following steps in sequence:
+    1. Use the PubMed search tool to search for papers.
+    2. Retrieve the abstracts from the search results.
+    3. Screen the abstracts based on the criteria provided by the user.
+    4. Fetch full-text articles for all the papers that pass step 3. Store the full-text articles in the Qdrant vector database, 
+        and extract the requested information for each article that passed step 3 from the full-text using the query provided by the user.
+    5. Please provide a full summary at the end of the entire flow executed, detailing each paper's title, PMID, and the whole process/screening/reasoning for each paper. 
+    The user will provide the search query, screening criteria, and the query for information extraction.
+    Make sure you finish everything in one step before moving on to next step.
+    Do not call more than one tool in one action."""

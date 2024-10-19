@@ -1,5 +1,7 @@
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_openai import ChatOpenAI
+from sentence_transformers import SentenceTransformer
+
 
 # embedding model
 
@@ -8,8 +10,11 @@ EMBEDDING_MODEL = HuggingFaceEmbeddings(model_name=MODEL_ID)
 
 # rag chat model
 RAG_LLM = ChatOpenAI(
-    model="gpt-4o-mini",
+    model="gpt-3.5-turbo",
     temperature=0
 )
 
-REASONING_LLM = ChatOpenAI(model="gpt-3.5-turbo")
+REASONING_LLM = ChatOpenAI(model="gpt-3.5-turbo") # change to "gpt-4o"
+
+# semantic model
+SEMANTIC_MODEL = SentenceTransformer('sentence-transformers/all-mpnet-base-v2')
