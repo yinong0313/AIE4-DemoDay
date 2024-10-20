@@ -1,0 +1,211 @@
+Introduction
+
+The intersection of infectious diseases, such as HIV, with chronic conditions like hypertension and diabetes poses a significant challenge in global health. While advancements in antiretroviral therapy have transformed HIV into a manageable chronic condition, a growing number of individuals with HIV now grapple with coexisting non-communicable diseases, impacting their Health-Related Quality of Life (HRQoL). Despite strides in HIV care, there is a notable policy gap that undermines efforts to address HIV-associated co-morbidities, particularly hypertension and diabetes, especially efforts to improve access, early detection, and ultimately HRQoL for individuals with HIV and co-morbidities. This study seeks to explore policy interventions aimed at improving the quality of life of HIV patients with hypertension or diabetes.
+
+Methods
+
+The study utilized a qualitative descriptive design to explore the experiences and perspectives of healthcare professionals and support staff regarding policy interventions for managing HIV patients with hypertension and/or diabetes co-morbidities in three regions of Ghana. The research was conducted in the Upper West, Ashanti, and Greater Accra regions among 11 participants, chosen purposively from professions involved in HIV patient care to understand their views on the implementation of policy interventions to HRQoL for individuals with HIV and co-morbidities. In-depth interviews were conducted face-to-face and tape-recorded. Thematic analysis approach was used to analyze the data.
+
+Results
+
+The study involved 11 participants from three regions with varied years of experience. Implemented policies that potentially improve the HRQoL for individuals with HIV and co-morbidities involve support groups, home visits, provision of free drugs, and counselling. Barriers to policy implementation included non-adherence to medication, stigma, cost of non-communicable diseases (NCDs) medications, accessibility issues to NCDs services, lack of interest or understanding among implementers, and high staff turnover. Facilitators encompassed in-service training, guidelines in common platforms, knowledge sharing, external resources, regular check-ups, and motivational packages for patients.
+
+Conclusion
+
+Individuals with HIV and comorbidities face complex challenges impacting their HRQoL, including emotional and financial dimensions. The study identifies critical policies and barriers, underscoring the need for tailored, patient-centered approaches. Facilitators like in-service training and regular check-ups offer actionable insights for effective policy implementation, emphasizing improved health outcomes for those with comorbid conditions. The study recommends integrated care approach and adherence support programs that address the unique challenges faced by people living with HIV.
+
+Data Availability
+
+he data underlying the results presented in the study are available from Figshare
+
+
+
+
+
+Introduction
+
+The global burden of diseases, particularly Human Immunodeficiency Virus (HIV) and non-communicable diseases (NCDs) such as hypertension and diabetes, represents a significant challenge for public health systems worldwide. These conditions not only pose a threat to individual health but also strain healthcare resources and impact the overall socioeconomic development of nations [
+
+Additionally, individuals with HIV and comorbidities such as hypertension or diabetes face complex health challenges. According to Baker et al. 2018 and Nduka et al. 2018, the presence of hypertension may elevate the risk of cardiovascular complications, as hypertension is a known risk factor for heart disease and stroke [
+
+Beyond cardiovascular complications, the coexistence of HIV and these NCDs may impact the overall progression of HIV. Studies have indicated that comorbidities, particularly hypertension, may contribute to immune dysregulation and potentially influence the course of HIV infection [
+
+Despite significant strides in HIV care, there exists a noticeable gap in policies specifically tailored to address the co-morbidities associated with HIV, particularly hypertension and diabetes [
+
+There are other challenges in successfully implementing HIV treatment policy in Ghana, including individual and environmental factors that hinder policy implementation [
+
+These studies have not provided any specific policy interventions designed to address the management of NCDs in HIV patients, despite the growing prevalence of such conditions among this population, this study seeks to explore and evaluate the existing policy interventions aimed at improving the quality of life of HIV patients with hypertension or diabetes.
+
+
+
+Methods
+
+
+
+Study design and setting
+
+The study employed qualitative descriptive design. Phenomenology approach was used to understand the experiences, perceptions, and opinions of healthcare professionals and support staff regarding existing policy interventions for managing HIV patients with co-morbidities of hypertension and/or diabetes. The study was conducted in three regions of Ghana, encompassing the Savannah, middle belt, and coastal belt ecological zones, more precisely in the Upper West, Ashanti, and Greater Accra regions respectively to ensure representation of perspectives from the coastal, middle and northern belt of Ghana. These regions were purposively selected due to the high prevalence of HIV cases in their respective ecological zones, as reported in the latest Ghana AIDS Commission fact sheets from 2019 [
+
+
+
+Study population, sample size and sampling
+
+Healthcare professional and support staff directly involved in the care and management of HIV patients were included in the study. Inclusion in the study involved health professionals who possess a minimum of two years of experience within the ART unit. Health personnel of a non-permanent nature and those who declined to offer informed consent for participating in interviews were excluded from the study. With the aid of a purposive sampling, 11 participants were selected from the three regions. Selected participants were taken through the informed consent process after they had studied the participant information sheet developed for the study.
+
+
+
+Data collection
+
+Using a pre-tested interview guide, in-depth interviews were conducted among frontline healthcare professionals and support staff for HIV-NCD treatment services from 24
+
+
+
+Data analysis
+
+The qualitative in-depth interviews were analysed through a thematic approach. Thematic analysis is a flexible and accessible method for identifying, analyzing, and reporting patterns within data, providing a rich and detailed account of the data. In thematic analysis, it is important to conduct a thorough and comprehensive coding process, ensuring internal coherence and consistency of themes, and providing a convincing and well-organized story about the data and topic [
+
+
+
+Trustworthiness
+
+Member checking was employed to validate findings with participants, ensuring the accuracy and authenticity of their perspectives. Peer debriefing involved seeking feedback from colleagues with qualitative research expertise, enriching the study’s credibility. The use of quotations from participants adds depth and authenticity to the research. Additionally, the inclusion of external perspectives through peer review and the application of triangulation techniques further confirms the study’s findings, collectively enhancing its trustworthiness.
+
+
+
+Ethical considerations
+
+Ethical clearance was obtained from the Ghana Health Service Ethics Review Committee with reference number: GHS-ERC027/05/23. All participants were requested to grant their consent in order to participate in the interview, and the entirety of the gathered data was rendered anonymous.
+
+
+
+Results
+
+Demographic profile of participants (in-depth interviews).
+
+
+
+Summary of themes
+
+The study identified three overarching themes related to policies and interventions aimed at improving the quality of life for People Living with HIV/AIDS (PLWHA) with comorbidities of hypertension and/or diabetes. Firstly, the theme on "Policy and Interventions" explored strategies such as support groups, home visits, provision of free drugs, and counseling, implemented at the national level to enhance the health-related quality of life for PLWHA with comorbidities. Secondly, the theme addressing "Barriers to Implementation" highlighted challenges like non-adherence to medications, stigma, cost concerns, accessibility barriers, and staff-related issues that impede the effective execution of these policies. Lastly, the theme focusing on "Facilitators to Implementation" unveiled positive factors such as in-service training, common platform guidelines, knowledge sharing, external resources for updates, regular check-ups, and motivational packages that act as facilitators in overcoming barriers and supporting the successful implementation of policies for PLWHA with hypertension and/or diabetes comorbidities.
+
+
+
+Theme 1: Policy and interventions
+
+An analysis of the data from the participants’ interviews revealed four sub-themes of national level policies and interventions to improve the health-related quality of life of HIV patients living with co-morbidities of hypertension and/or diabetes and these comprised a) a support group system b) home visits c) provision of free drugs and d) counseling.
+
+
+
+“And with the diabetes too, usually we have a support group meeting that will usually hold every month, so with this most of these things we talk about them, especially with their diets. We educate them on what they need to eat. We have nutritionists who also come around to also guide them on what to eat and not to eat, and the time to also eat so that it will not end up causing an increase or a rise in maybe your BP levels and your sugar" (G-R2)
+
+
+
+
+
+The policy of providing free drugs aims not only to alleviate the financial burden of patients but also to enhance adherence.
+
+
+
+
+
+Individuals facing stigma and discrimination are connected to a paralegal who engages with a psychosocial counselor to provide assistance and support.
+
+
+
+
+
+Theme 2: Barriers to implementation of the policies to improve quality of life of PLWHA and hypertension/diabetes comorbidities
+
+This theme explores the challenges and obstacles encountered in the practical application of national-level policies designed to enhance the well-being of individuals dealing with both HIV/AIDS and co-existing hypertension or diabetes. The theme reveals various impediments that hinder the effective implementation of these policies, shedding light on critical barriers that need attention for successful healthcare delivery. These challenges were peculiar to each region.
+
+
+
+Patients facing HIV along with hypertension and diabetes may experience a substantial pill burden, as they are required to take antiretrovirals, hypertensive drugs, and diabetic medications, contributing to the complexity of their medication regimen.
+
+
+
+
+
+Respondents also reported that individuals not only face self-stigmatization but also project stigma onto healthcare providers, presenting a significant challenge in the context of managing HIV and comorbidities.
+
+
+
+
+
+
+
+Respondents stated the logistical challenges faced in healthcare facilities, specifically addressing space limitations, which result in a fragmented patient experience where individuals may need to move between different locations for various aspects of their care, including medication dispensing, consultations, and administrative tasks.
+
+
+
+
+
+
+
+Theme 3: Facilitators to the implementation of the policies to improve quality of life of PLWHA and hypertension/diabetes comorbidities
+
+This theme encapsulates the factors that support the successful execution of policies aimed at enhancing the health-related quality of life for individuals living with HIV and co-morbidities of hypertension and/or diabetes. Facilitators within this theme contribute to overcoming challenges and promoting the effective implementation of policies. These facilitators include in-service training and workshops, guidelines in common platforms, knowledge sharing, external resource for updates, regular check-ups, and motivational packages for patients.
+
+
+
+Respondents highlighted the role of workshops as a valuable mechanism for disseminating information and knowledge about healthcare policies.
+
+
+
+
+
+
+
+
+
+
+
+
+
+Also, respondents highlighted the effort made healthcare providers to organize programs aimed at reducing stigma, where clients are taken for trainings and providing clients with opportunities for relaxation which not only contribute to their well-being but also serve as a means of support and encouragement, potentially motivating them to actively engage in their health management.
+
+
+
+
+
+Discussion
+
+The study’s findings illuminate the complex landscape surrounding policies for improving the health-related quality of life of People Living with HIV/AIDS (PLWHA) coping with comorbidities of hypertension and/or diabetes. National-level policies and interventions, encompassing support groups, home visits, provision of free drugs, and counseling, underscore a holistic approach. However, pervasive barriers such as non-adherence, stigma, financial constraints, and accessibility issues demand targeted interventions. The study emphasizes the pivotal role of healthcare providers and identifies facilitators, including in-service training, common guidelines, knowledge sharing, external resources, regular check-ups, and motivational packages, as crucial for effective policy implementation.
+
+This theme delves into the national-level policies and interventions designed to enhance the quality of life for PLWHA dealing with hypertension and/or diabetes. The sub-themes, including a support group system, home visits, provision of free drugs, and counseling, highlight the multifaceted approach required to address the complexities of comorbid conditions. These policies have also been highlighted in the Guidelines for Antiretroviral Therapy in Ghana (2017) and National HIV and AIDS Policy (2019) [
+
+Additionally, counseling services emerge as a critical policy to address the stigma associated with HIV and comorbid conditions. According to the Guidelines for Antiretroviral Therapy in Ghana (2017), The goal of counselling is to help the client make an informed decision to start and to adhere to a life-long treatment [
+
+Each region faces distinct challenges impacting the effective implementation of interventions. Non-adherence to medication regimens is identified as a barrier, particularly in regions where patients face challenges in following prescribed schedules, this finding was similar to a scoping review qualitative research by Kvarnström et al. (2021) [
+
+Furthermore, financial constraints associated with obtaining medications for comorbid conditions pose a significant challenge, this is similar to the findings in Malawi [
+
+Accessibility barriers highlight challenges in accessing necessary healthcare services, especially in regions where there is a lack of direct links between different departments. The reported logistical constraints underscore the importance of streamlining healthcare services, improving infrastructure, and enhancing coordination to ensure seamless access for individuals with comorbidities. In addition, lack of interest or understanding among implementers emphasizes the crucial role of healthcare providers and implementers in the successful execution of policies. Lack of interest or understanding among implementers can hinder effective policy implementation. Addressing this challenge necessitates targeted efforts, including training programs, awareness campaigns, and fostering a culture of commitment and understanding among healthcare professionals. Lastly, high staff turnover poses a challenge to the continuity and consistency of healthcare services [
+
+These challenges highlight the intricate interplay between individual attitudes, institutional dynamics, and external factors in hindering effective policy implementation [
+
+Distinct factors contribute to overcoming barriers and supporting successful policy implementation. In-service training and workshops emerge as crucial facilitators to enhance the knowledge and skills of healthcare professionals [
+
+
+
+Limitation of the study
+
+The study included a relatively small sample size of 11 participants from three regions in Ghana, therefore the findings may lack generalizability to a larger population.
+
+
+
+Conclusion
+
+The experiences of individuals with HIV and comorbidities profoundly impact their HRQoL, extending beyond medical complexities to emotional and financial dimensions. While the study highlights critical policies such as support groups, home visits, provision of free drugs, and counseling, it also underscores pervasive barriers, including non-adherence, stigma, financial constraints, and accessibility issues.
+
+Managing multiple chronic illnesses alongside HIV induces fear, anxiety, and considerable burden. The facilitators identified, such as in-service training, common guidelines, knowledge sharing, external resources, regular check-ups, and motivational packages, provide actionable insights for improving policy implementation. The findings emphasize the need for tailored, patient-centered approaches and targeted interventions to ensure effective implementation and improved health outcomes for individuals with comorbid conditions.
+
+
+
+Recommendations
+
+The study recommends the implementation and reinforcement of an integrated care approach for individuals living with HIV and comorbid conditions within the same healthcare framework. Also, the implementation of tailored adherence support programs that address the unique challenges faced by PLWHA.
+
+We want to express our appreciation to all the management and study participants of the ART clinics that were involved this study.
+
+References

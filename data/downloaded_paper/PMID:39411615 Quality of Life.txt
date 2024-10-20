@@ -1,0 +1,129 @@
+Background
+
+Diabetes mellitus is a significant public health issue globally, with increasing prevalence rates. In Saudi Arabia, a substantial proportion of the adult population is affected. While the impact of diabetes on physical health is well-documented, less is known about its effects on emotional and social well-being in this region.
+
+Methods
+
+From January to March 2024, we conducted a cross-sectional online survey of 207 individuals with diabetes in Saudi Arabia. The survey, available in Arabic and English, assessed physical symptoms, emotional health, social interactions, and overall quality of life. Descriptive statistics were used for analysis.
+
+Results
+
+The majority of participants were aged 31-45 years (n=63, 30.4%) and female (n=118, 56.9%). Type 2 diabetes was the most common (n=122, 59.1%). Regarding physical health, 34.6% (n=72) rated their health as good while 37.2% (n=77) experienced physical symptoms sometimes and 17.9% (n=37) often. Emotional health challenges were reported by 39.2% (n=81) experiencing anxiety and 33.9% (n=70) experiencing depression. Social interactions were impacted, with 28.6% (n=59) reporting challenges in relationships and 14.3% (n=30) facing significant impacts on recreational activities. Overall quality of life was rated as good by 40.4% (n=83), fair by 29.9% (n=62), and very poor by 4.8% (n=10).
+
+Conclusions
+
+The study highlights the significant effects of diabetes on the physical, emotional, and social aspects of life in Saudi Arabia. The findings underscore the need for comprehensive care strategies that incorporate medical treatment, emotional support, and social integration to improve the overall quality of life for individuals with diabetes.
+
+
+
+
+
+Introduction
+
+Diabetes mellitus represents a significant public health challenge globally, with its prevalence steadily increasing across diverse populations. In Saudi Arabia, the prevalence of diabetes has reached alarming levels, with recent estimates indicating that approximately 25% of the adult population is affected by this chronic condition [
+
+The impact of diabetes extends beyond the management of blood glucose levels and the prevention of acute complications. Individuals with diabetes often experience a range of chronic physical symptoms, including fatigue, pain, and impaired mobility, which can significantly affect their daily lives and overall physical health. Furthermore, the psychological burden associated with managing a chronic condition like diabetes is substantial. Many individuals with diabetes report high levels of anxiety and depression, which can further complicate disease management and contribute to a diminished quality of life [
+
+Social health is also critically affected by diabetes. Individuals may encounter challenges in maintaining social relationships and participating in recreational activities due to their condition. These social dimensions of diabetes can contribute to feelings of isolation and affect overall well-being, highlighting the need for comprehensive support systems that address not only medical needs but also emotional and social aspects [
+
+Despite the known impacts of diabetes, there is a relative paucity of research focusing specifically on the quality of life among individuals with diabetes in Saudi Arabia. Most existing studies have concentrated on clinical outcomes or specific complications, with limited attention given to the broader aspects of patient well-being. Understanding how diabetes affects individuals' daily lives, emotional states, and social interactions is crucial for developing effective interventions and support strategies [
+
+This study aims to fill this gap by providing a detailed assessment of the quality of life among individuals with diabetes in Saudi Arabia. By evaluating various dimensions of health-including physical symptoms, emotional well-being, social challenges, and overall quality of life research seeks to offer valuable insights that can inform better clinical practices and support mechanisms. Addressing these issues comprehensively will contribute to improving the overall care and support for individuals living with diabetes, ultimately enhancing their quality of life and health outcomes.
+
+
+
+Materials and methods
+
+Study design and setting
+
+This cross-sectional study was conducted via an online survey to assess various aspects of quality of life among individuals with diabetes in Saudi Arabia. The survey was distributed from January to March 2024 through social media platforms, diabetes support groups, and healthcare provider networks. Participants were invited to complete the survey voluntarily, and informed consent was obtained from all respondents before they began the survey. The choice of an online platform was intended to maximize reach and convenience for a diverse participant pool.
+
+Participants
+
+The study sample consisted of 207 individuals diagnosed with diabetes. To qualify for inclusion, participants had to be at least 18 years old and have a confirmed diagnosis of diabetes. Individuals who did not meet these criteria or who were unable to provide informed consent were excluded from the study. Demographic information collected included age, gender, type of diabetes, and duration of diagnosis, allowing for a comprehensive analysis of the sample population.
+
+Survey instrument
+
+The survey instrument was carefully developed based on a review of existing literature and consultation with experts to ensure it addressed relevant aspects of diabetes management and quality of life. The survey comprised several sections, including demographics, physical health, emotional health, social health, and general well-being. Questions were designed to capture data on participants’ age, gender, type of diabetes, and the duration of their diagnosis. Additionally, the survey assessed the frequency and impact of physical symptoms related to diabetes, overall physical health, levels of anxiety and depression, satisfaction with healthcare support, challenges in maintaining social relationships, and comfort in discussing diabetes. The overall quality of life and perceived impact of diabetes on well-being were also evaluated, along with participants’ preferences for additional support.
+
+Data collection
+
+Data were collected using an online survey platform, which allowed for efficient and widespread distribution. The survey was available in both Arabic and English to accommodate the linguistic diversity of respondents. Participants accessed the survey through a unique link and completed it anonymously. The estimated time to complete the survey was approximately 10-15 minutes, ensuring that it was manageable for respondents and likely to yield high completion rates.
+
+Data analysis
+
+Data analysis was performed using descriptive statistics to summarize the responses. Frequencies and percentages were calculated for all categorical variables to provide an overview of the participants’ demographics and their responses to survey questions. The data were aggregated and presented in tabular form to facilitate the interpretation of key findings. Statistical software was employed to ensure precise and reliable analysis.
+
+
+
+Results
+
+Demographics of survey respondents
+
+A total of 207 individuals with diabetes participated in the survey. The majority of respondents were aged 31-45 years (n=63, 30.4%), followed by those aged 18-30 years (n=58, 28.1%). Participants over 60 years constituted 14.8% (n=29) of the sample. Gender distribution was fairly even, with 56.9% (n=118) identifying as female and 43.1% (n=89) as male. Type 2 diabetes was the most commonly reported type (n=122, 59.1%), followed by Type 1 diabetes (n=38, 18.5%). Approximately 16.7% (n=35) of respondents were unsure of their diabetes type. In terms of duration since diagnosis, 42.1% (n=87) had been diagnosed for 1-5 years while 15.9% (n=33) had lived with diabetes for over 10 years (Table
+
+Demographics of survey respondents (N=207)
+
+The table presents the demographic characteristics of the survey respondents. Values are represented as n (%).
+
+Physical health of participants
+
+Regarding the frequency of physical symptoms related to diabetes, 37.2% (n=77) of respondents reported experiencing symptoms sometimes, and 17.9% (n=37) reported experiencing them often. A total of 34.6% (n=72) rated their overall physical health as good in the past month, whereas 32.7% (n=68) rated it as fair. Diabetes affected daily activities sometimes for 25.5% (n=53) of respondents and often for 12.0% (n=25) (Table
+
+Frequency and impact of physical symptoms and overall physical health (N=207)
+
+The table details the frequency and impact of physical symptoms, as well as overall physical health ratings. Values are represented as n (%).
+
+Emotional health of participants
+
+In terms of anxiety about diabetes management, 39.2% (n=82) of respondents felt anxious sometimes, and 16.3% (n=34) felt anxious often. Feelings of depression or sadness related to diabetes were reported sometimes by 33.9% (n=71) of respondents and often by 13.4% (n=28). Satisfaction with healthcare support varied, with 36.9% (n=77) being satisfied and 18.8% (n=39) very satisfied. However, 11.6% (n=24) were dissatisfied, and 6.8% (n=14) were very dissatisfied (Table
+
+Emotional health regarding diabetes management (n=207)
+
+This table shows emotional health metrics related to diabetes management, including anxiety, depression, and satisfaction with healthcare support. Values are represented as n (%).
+
+Social health of participants
+
+Challenges in maintaining social relationships due to diabetes were reported sometimes by 28.6% (n=60) of respondents and often by 11.9% (n=25). Regarding participation in social or recreational activities, 30.8% (n=65) reported a moderate impact, and 14.3% (n=30) reported a significant impact. Comfort in discussing diabetes with others was high, with 25.2% (n=53) being very comfortable and 34.3% (n=72) comfortable. However, 18.1% (n=37) reported feeling uncomfortable or very uncomfortable discussing their condition (Table
+
+Social health and comfort in discussing diabetes (n=207)
+
+This table summarizes challenges in social relationships, participation in activities, and comfort in discussing diabetes. Values are represented as n (%).
+
+The general well-being of participants
+
+The overall quality of life related to living with diabetes was rated as good by 40.4% (n=85) of respondents while 29.9% (n=63) rated it as fair. A small proportion rated their quality of life as very poor (4.8%, n=10). The perceived impact of diabetes on overall well-being was neutral for 38.6% (n=81) of respondents and negative for 17.1% (n=36). To improve quality of life, 32.4% (n=68) of respondents indicated a need for better medical treatment, 25.7% (n=54) sought more educational resources, and 27.6% (n=58) desired improved emotional support. Enhanced social support and other types of support were mentioned by 9.5% (n=20) and 2.9% (n=6) of respondents, respectively (Table
+
+Overall quality of life and perceived impact of diabetes (N=207)
+
+This table outlines the overall quality of life, perceived impact of diabetes, and types of additional support needed. Values are represented as n (%).
+
+
+
+Discussion
+
+This study provides a comprehensive evaluation of the quality of life among individuals with diabetes in Saudi Arabia, highlighting critical areas of concern and offering insights into the broader implications for diabetes management and support. The findings reveal a complex interplay between the physical, emotional, and social dimensions of health, which are pivotal for understanding the full impact of diabetes on individuals' lives [
+
+Our results indicate that a significant proportion of respondents experience frequent physical symptoms related to diabetes, with 37.2% reporting symptoms sometimes and 17.9% often. This aligns with existing literature that emphasizes the burden of diabetes-related symptoms on daily functioning and overall health. The relatively high proportion of individuals rating their physical health as fair or poor underscores the need for effective management strategies and interventions. Addressing physical symptoms and improving overall health should be a priority in diabetes care to enhance patients' quality of life and mitigate the daily challenges associated with the condition [
+
+The study highlights substantial emotional challenges faced by individuals with diabetes. A noteworthy percentage of respondents reported experiencing anxiety (39.2%) and depression (33.9%) related to their condition. These findings are consistent with previous research showing that diabetes management often entails significant psychological stress, which can adversely affect patients' mental health. The variability in satisfaction with healthcare support - 36.9% satisfied and 11.6% dissatisfied - suggests that there is room for improvement in the support provided by healthcare professionals. Enhancing emotional support and integrating mental health services into routine diabetes care could help address these issues and improve overall patient well-being.
+
+The survey results reveal that a considerable number of participants face challenges in maintaining social relationships and participating in recreational activities due to diabetes. Specifically, 28.6% reported moderate challenges in social interactions, and 14.3% experienced significant impacts on their participation in activities. This underscores the social dimensions of diabetes management and the importance of addressing these aspects in patient care. Social support networks play a crucial role in managing chronic conditions, and improving social integration and support could alleviate some of the burdens faced by individuals with diabetes [
+
+The majority of respondents rated their overall quality of life as good, yet 29.9% rated it as fair, and 4.8% rated it as very poor. This spectrum of responses reflects the diverse experiences of individuals living with diabetes and highlights the need for personalized care approaches. The perceived negative impact of diabetes on overall well-being, reported by 17.1% of participants, further emphasizes the need for comprehensive support strategies. Our findings suggest that interventions aimed at improving medical treatment, increasing educational resources, and enhancing emotional support could significantly benefit patients' quality of life [
+
+Strengths and limitations
+
+This study's strengths include its focus on a diverse sample of individuals with diabetes across Saudi Arabia and its use of a comprehensive survey instrument to assess various aspects of quality of life. However, several limitations must be acknowledged. The reliance on self-reported data may introduce biases, and the online nature of the survey might have excluded individuals with limited access to technology. Additionally, while the sample provides valuable insights, it may not fully represent all individuals with diabetes in Saudi Arabia, potentially limiting the generalizability of the findings.
+
+
+
+Conclusions
+
+This study underscores the profound impact of diabetes on individuals' physical, emotional, and social well-being in Saudi Arabia. The findings reveal significant challenges in managing diabetes-related symptoms, emotional stress, and social interactions, highlighting the need for comprehensive and personalized care strategies. Addressing these multifaceted issues through enhanced medical treatment, better educational resources, and increased emotional and social support could substantially improve the quality of life for individuals living with diabetes. By adopting a holistic approach to diabetes management, healthcare providers can better support patients and foster a more effective and empathetic care environment.
+
+Disclosures
+
+Author Contributions
+
+References
