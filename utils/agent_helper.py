@@ -1,5 +1,4 @@
-from typing import List, TypedDict, Annotated
-import operator
+from utils.prompts import AGENT_SYSTEM_PROMPT
 
 from langchain.agents import AgentExecutor, create_openai_functions_agent
 from langchain.output_parsers.openai_functions import JsonOutputFunctionsParser
@@ -7,6 +6,19 @@ from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_core.messages import AIMessage, BaseMessage, HumanMessage
 
 from langchain_openai import ChatOpenAI
+
+def get_agent_prompt(prompt):
+    system_prompt = prompt + AGENT_SYSTEM_PROMPT
+
+    research_prompt = ChatPromptTemplate.from_messages(
+            [(
+                    "system",
+                    system_prompt,
+                ),
+                MessagesPlaceholder(variable_name="messages"),
+                MessagesPlaceholder(variable_name="agent_scratchpad"),
+            ])
+    return research_prompt
 
 
 def agent_node(state, agent, name):
@@ -17,31 +29,14 @@ def agent_node(state, agent, name):
 def create_agent(
     llm: ChatOpenAI,
     tools: list,
-    system_prompt: str,
+    prompt: str,
 ) -> str:
     """Create a function-calling agent and add it to the graph."""
-    system_prompt += ("\nWork autonomously according to your specialty, using the tools available to you."
-    " Do not ask for clarification."
-    " Your other team members (and other teams) will collaborate with you with their own specialties."
-    " You are chosen for a reason! You are one of the following team members: {team_members}.")
-    prompt = ChatPromptTemplate.from_messages(
-        [
-            (
-                "system",
-                system_prompt,
-            ),
-            MessagesPlaceholder(variable_name="messages"),
-            MessagesPlaceholder(variable_name="agent_scratchpad"),
-        ]
-    )
-    agent = create_openai_functions_agent(llm, tools, prompt)
+    
+    agent_prompt = get_agent_prompt(prompt)
+    agent = create_openai_functions_agent(llm, tools, agent_prompt)
     executor = AgentExecutor(agent=agent, tools=tools)
     return executor
-
-class ResearchTeamState(TypedDict):
-    messages: Annotated[List[BaseMessage], operator.add]
-    team_members: List[str]
-    next: str
     
 
 def create_team_supervisor(llm: ChatOpenAI, system_prompt, members) -> str:

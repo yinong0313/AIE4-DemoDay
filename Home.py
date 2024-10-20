@@ -1,8 +1,8 @@
 import streamlit as st
 
 # Global storage for API key using session state
-if "api_key" not in st.session_state:
-    st.session_state["open_api_key"] = None
+if "openai_api_key" not in st.session_state:
+    st.session_state["openai_api_key"] = None
 
 st.title("Welcome to Research Pilot")
 
@@ -11,5 +11,5 @@ openai_api_key = st.text_input("Enter your OpenAI API Key to proceed:", type="pa
 "[Get an OpenAI API key](https://platform.openai.com/account/api-keys)"
 
 if openai_api_key:
-    st.session_state["open_api_key"] = openai_api_key
+    st.session_state["openai_api_key"] = openai_api_key
     st.success("API key received!")
