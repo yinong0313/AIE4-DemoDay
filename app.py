@@ -158,7 +158,7 @@ def fetch_and_extract(pmids: List[str], query: str):
     embedding_model = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
     corpus = {}
     consolidated_results={}
-    os.makedirs('./data/downloaded_paper', exist_ok=True)
+    #os.makedirs('./data/downloaded_paper', exist_ok=True)
 
     # Fetch records from PubMed Central (PMC)
     handle = Entrez.efetch(db="pubmed", id=",".join(pmids), retmode="xml")
@@ -192,11 +192,11 @@ def fetch_and_extract(pmids: List[str], query: str):
                     "Title": title,
                     "FullText": cleaned_full_article   # Add chunked text
                 })
-                output_nm = 'PMID:' + pmid + ' ' + " ".join(title.split(' ')[0:3]) + '.txt'
-                output_dir = os.path.join('./data/downloaded_paper', output_nm)
-                with open(output_dir, "w") as file:
-                    # Write the text to the file
-                    file.write(cleaned_full_article)
+                #output_nm = 'PMID:' + pmid + ' ' + " ".join(title.split(' ')[0:3]) + '.txt'
+                #output_dir = os.path.join('./data/downloaded_paper', output_nm)
+                #with open(output_dir, "w") as file:
+                #   # Write the text to the file
+                #    file.write(cleaned_full_article)
             else:
                 full_articles.append({"PMID": pmid, "Title": title, "FullText": "cannot fetch"})
         except KeyError:
@@ -396,7 +396,12 @@ async def run_graph(inputs):
 # Chainlit interaction setup
 @cl.on_chat_start
 async def on_chat_start():
-    await cl.Message(content="Welcome! Please provide your PubMed query, screening criteria and the information you want to extract.").send()
+    await cl.Message(content="""Welcome! Please provide your PubMed query, screening criteria, and the information you want to extract into a dictionary format.
+                     for example,
+                     "query": "("diabetes"[Title]) AND (("quality of life"[Title]))",
+                     "screening_criteria": "how diabetes impact quality of life ",
+                     "extraction_query": "what kind data they used?"
+                     """).send()
 
 @cl.on_message
 async def main(message):
