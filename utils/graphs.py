@@ -3,6 +3,7 @@ from utils.models import REASONING_LLM, RAG_LLM, EMBEDDING_MODEL
 from utils.rag import *
 from utils.vector_store import *
 from utils.prompts import QUERY_AGENT_PROMPT, TEXTBOOK_RAG_PROMPT, PAPER_RAG_PROMPT, SUPERVISOR_PROMPT, RESEARCH_AGENT_PROMPT
+from utils.data_analysis import data_visualization_node
 
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.messages import AIMessage, BaseMessage, HumanMessage
@@ -10,16 +11,17 @@ from langchain_core.tools import tool
 from langchain_community.tools.semanticscholar.tool import SemanticScholarQueryRun
 from langchain_community.utilities.semanticscholar import SemanticScholarAPIWrapper
 from langgraph.graph import END, StateGraph
+# from streamlit.runtime.uploaded_file_manager import UploadedFile
 
 import functools
 import operator
 from typing import Annotated, List, TypedDict
 import os
 
-
+##############################################
 ######## Semantic scholar query node #########
 
-def get_scholar_query_node(llm=REASONING_LLM, prompt=QUERY_AGENT_PROMPT, name="ScholarQuery", top_k_results = 5, load_max_docs = 5):
+def get_scholar_query_node(llm=REASONING_LLM, prompt=QUERY_AGENT_PROMPT, name="ScholarQuery", top_k_results = 1, load_max_docs = 1):
     
     api_wrapper = SemanticScholarAPIWrapper(top_k_results=top_k_results, load_max_docs=load_max_docs)
     semantic_query_tool = SemanticScholarQueryRun(api_wrapper=api_wrapper, description=prompt)
@@ -32,6 +34,7 @@ def get_scholar_query_node(llm=REASONING_LLM, prompt=QUERY_AGENT_PROMPT, name="S
     query_node = functools.partial(agent_node, agent=query_agent, name=name)
     return query_node
 
+###########################################
 ############ RAG research node ############
 
 def create_textbook_rag(path='data/text_books/Textbook-of-Diabetes-2024-shortened.pdf'):
@@ -101,29 +104,36 @@ def get_research_node(llm=REASONING_LLM):
 
 class ResearchTeamState(TypedDict):
     messages: Annotated[List[BaseMessage], operator.add]
+    file_path: str
+    questions: List[BaseMessage]
     team_members: List[str]
     next: str
     
-def compile_graph():
+def compile_analysis_graph():
 
     supervisor_agent = create_team_supervisor(
                             REASONING_LLM,
                             SUPERVISOR_PROMPT,
                             ["ScholarQuery", "LocalInformationRetriever"],
                         )
+    analysis_node = data_visualization_node()
     query_node = get_scholar_query_node()
     research_node = get_research_node()
     
-    
     graph = StateGraph(ResearchTeamState)
+    
+    graph.add_node("Visualisation", analysis_node)
     graph.add_node("Research", research_node)
     graph.add_node("Query", query_node)
     graph.add_node("Supervisor", supervisor_agent)
 
     graph.add_edge("Query", "Supervisor")
     graph.add_edge("Research", "Supervisor")
+    graph.add_edge("Visualisation", "Supervisor")
 
     def next_step(state):
+        # Truncate messages before deciding on the next step to keep the token count manageable
+        state["messages"] = truncate_messages(state["messages"])
         return state['next']
 
     graph.add_conditional_edges(
@@ -132,12 +142,16 @@ def compile_graph():
         {"ScholarQuery": "Query", "LocalInformationRetriever": "Research", "FINISH": END},
     )
 
-    graph.set_entry_point("Supervisor")
+    graph.set_entry_point("Visualisation")
     chain = graph.compile()
 
-    def enter_chain(message: str):
+    def enter_chain(question: str, file_path: str):
         results = {
-            "messages": [HumanMessage(content=message)],
+            "messages": [HumanMessage(content=question)],
+            "questions": [HumanMessage(content=question)],
+            "file_path": file_path,
+            "team_members": ["ScholarQuery", "LocalInformationRetriever"], 
+            "next": ""
         }
         return results
 

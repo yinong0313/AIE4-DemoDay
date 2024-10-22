@@ -14,6 +14,15 @@ from utils.prompts import PUBMED_SYSTEM_MESSAGE
 
 
 async def run_graph(user_inputs, graph):
+    """
+    user_input: sample question: 
+        {
+        "query": "("Impact"[Title/Abstract]) AND (("COVID"[Title/Abstract] OR "pandemic"[Title/Abstract]) AND ("healthcare resource utilization"[Title/Abstract] OR "health resource utilization"[Title/Abstract]))", 
+        "screening_criteria": "comparison of healthcare resource utilization before and after the COVID pandemic", 
+        "extraction_query": "data source information used in each paper (especially medical records)"
+        }
+    """
+    
     final_message_content = None  # Variable to store the final message content
     system_instructions = SystemMessage(content=PUBMED_SYSTEM_MESSAGE)
     human_inputs = HumanMessage(content=user_inputs)
@@ -44,11 +53,11 @@ async def run_graph(user_inputs, graph):
 
 st.title("🔬💊 PubMed search tool")
 
-with st.sidebar(key='email_form'):
+with st.sidebar:
     # Set your Entrez email for PubMed queries
     Entrez.email = st.text_input("Enter your Email")
 
-if not st.session_state["openai-api_key"]:
+if not st.session_state["openai_api_key"]:
     st.warning("Please go to the Welcome page and enter your OpenAI API key to proceed.")
 
 else:
@@ -62,3 +71,4 @@ else:
                 st.info(response)
             else:
                 st.info("Sorry, I couldn't process the request.")
+                

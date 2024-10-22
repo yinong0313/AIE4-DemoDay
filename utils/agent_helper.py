@@ -6,11 +6,12 @@ from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_core.messages import AIMessage, BaseMessage, HumanMessage
 
 from langchain_openai import ChatOpenAI
+from typing import List
 
 def get_agent_prompt(prompt):
     system_prompt = prompt + AGENT_SYSTEM_PROMPT
 
-    research_prompt = ChatPromptTemplate.from_messages(
+    agent_prompt = ChatPromptTemplate.from_messages(
             [(
                     "system",
                     system_prompt,
@@ -18,7 +19,7 @@ def get_agent_prompt(prompt):
                 MessagesPlaceholder(variable_name="messages"),
                 MessagesPlaceholder(variable_name="agent_scratchpad"),
             ])
-    return research_prompt
+    return agent_prompt
 
 
 def agent_node(state, agent, name):
@@ -39,9 +40,9 @@ def create_agent(
     return executor
     
 
-def create_team_supervisor(llm: ChatOpenAI, system_prompt, members) -> str:
+def create_team_supervisor(llm: ChatOpenAI, system_prompt, team_members) -> str:
     """An LLM-based router."""
-    options = ["FINISH"] + members
+    options = ["FINISH", "DataVis"] + team_members
     function_def = {
         "name": "route",
         "description": "Select the next role.",
@@ -54,6 +55,11 @@ def create_team_supervisor(llm: ChatOpenAI, system_prompt, members) -> str:
                     "anyOf": [
                         {"enum": options},
                     ],
+                    },
+                "question": {
+                    "title": "Question",
+                    "type": "string",
+                    "description": "A clarifying question to ask if needed. Only required if 'next' is 'DataVis'.",
                 },
             },
             "required": ["next"],
@@ -65,13 +71,26 @@ def create_team_supervisor(llm: ChatOpenAI, system_prompt, members) -> str:
             MessagesPlaceholder(variable_name="messages"),
             (
                 "system",
-                "Given the conversation above, who should act next?"
-                " Or should we FINISH? Select one of: {options}",
+                "Given the conversation above, do we have an answer to the initial question?"
+                "If yes, let's FINISH."
+                "Or should we ask a clarification question and visualise the data again, select 'DataVis'"
+                "Or should we do some more document search? Select one of: {team_members}",
             ),
         ]
-    ).partial(options=str(options), team_members=", ".join(members))
+    ).partial(options=str(options), team_members=", ".join(team_members))
     return (
         prompt
         | llm.bind_functions(functions=[function_def], function_call="route")
         | JsonOutputFunctionsParser()
     )
+    
+    # Function to truncate messages
+def truncate_messages(messages: List[HumanMessage], max_tokens: int = 3000) -> List[HumanMessage]:
+    """
+    Truncate the messages to ensure the total token count stays within the limit.
+    """
+    total_tokens = sum(len(message.content.split()) for message in messages)  # Approximate token count
+    while total_tokens > max_tokens and messages:
+        messages.pop(0)  # Remove the oldest message to reduce token count
+        total_tokens = sum(len(message.content.split()) for message in messages)
+    return messages
