@@ -14,9 +14,8 @@ RAG_LLM = ChatOpenAI(
     temperature=0
 )
 
-# REASONING_LLM_ID = "gpt-3.5-turbo"
-REASONING_LLM_ID = "gpt-4o-mini"
-REASONING_LLM = ChatOpenAI(model=REASONING_LLM_ID) # change to "gpt-4o"
+REASONING_LLM_ID = "gpt-4o"
+REASONING_LLM = ChatOpenAI(model=REASONING_LLM_ID)
 
 # semantic model
 SEMANTIC_MODEL = SentenceTransformer('sentence-transformers/all-mpnet-base-v2')
