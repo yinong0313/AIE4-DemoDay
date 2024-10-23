@@ -4,3 +4,4 @@ __pycache__/
 .files
 reproduce.ipynb
 .png
+.pkl

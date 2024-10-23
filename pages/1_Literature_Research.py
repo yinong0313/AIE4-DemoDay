@@ -1,7 +1,10 @@
+import streamlit as st
+st.set_page_config(layout="wide")
+
 from Bio import Entrez
 
 from langchain_core.messages import SystemMessage, HumanMessage
-import streamlit as st
+
 
 import sys
 import os

@@ -133,7 +133,7 @@ def assistant_node(state, assistant, name):
                 file.write(image_data_bytes)
             
             logging.info(f"Image saved successfully to: {file_path}")
-            return {"messages": [HumanMessage(content=results.content[1].text.value, name=name)]}
+            return {"messages": [HumanMessage(content=results.content[1].text.value, name=name, image_path=file_path)]}
         else:
             logging.warning("No image file found in the assistant's response.")
             return {"messages": [HumanMessage(content=results.content[0].text.value, name=name)]}

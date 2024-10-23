@@ -71,7 +71,7 @@ def create_team_supervisor(llm: ChatOpenAI, system_prompt, team_members) -> str:
             MessagesPlaceholder(variable_name="messages"),
             (
                 "system",
-                "Given the conversation above, do we have an answer to the initial question?"
+                "Given the conversation above, do we have an answer to the initial question with at least two references?"
                 "If yes, let's FINISH."
                 "Or should we ask a clarification question and visualise the data again, select 'DataVis'"
                 "Or should we do some more document search? Select one of: {team_members}",

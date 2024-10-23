@@ -17,6 +17,7 @@ import functools
 import operator
 from typing import Annotated, List, TypedDict
 import os
+import pickle
 
 ##############################################
 ######## Semantic scholar query node #########
@@ -37,9 +38,14 @@ def get_scholar_query_node(llm=REASONING_LLM, prompt=QUERY_AGENT_PROMPT, name="S
 ###########################################
 ############ RAG research node ############
 
-def create_textbook_rag(path='data/text_books/Textbook-of-Diabetes-2024-shortened.pdf'):
-
-    textbook_documents = get_markdown_documents(path, chunk_size=500, chunk_overlap=50)
+def create_textbook_rag(path='data/text_books/Textbook-of-Diabetes-2024.pdf', 
+                        pkl_file="data/text_books/textbook_docs.pkl"):
+    try:
+        with open(pkl_file, "rb") as f:
+            textbook_documents = pickle.load(f)
+            print(f'{len(textbook_documents)} documents loaded!')
+    except:
+        textbook_documents = get_markdown_documents(path, chunk_size=500, chunk_overlap=50)
 
     rag_runnables = RAGRunnables(
                                 rag_prompt_template = ChatPromptTemplate.from_template(TEXTBOOK_RAG_PROMPT),
@@ -52,15 +58,20 @@ def create_textbook_rag(path='data/text_books/Textbook-of-Diabetes-2024-shortene
     return textbook_chain
 
 
-def create_paper_rag(folder='data/literature'):
+def create_paper_rag(folder='data/literature', pkl_file="paper_docs.pkl"):
    
-    paths = [os.path.join(folder, file) for file in  os.listdir(folder)]
+    try:
+        with open(os.path.join(folder, pkl_file), "rb") as f:
+            paper_documents = pickle.load(f)
+            print(f'{len(paper_documents)} documents loaded!')
+    except:    
+        paths = [os.path.join(folder, file) for file in  os.listdir(folder)]
+        paper_documents = []
+        for path in paths:
+            document = get_markdown_documents(path, chunk_size=500, chunk_overlap=50)
+            paper_documents.extend(document)
 
-    paper_documents = []
-    for path in paths:
-        document = get_markdown_documents(path, chunk_size=500, chunk_overlap=50)
-        paper_documents.extend(document)
-
+    
     rag_runnables = RAGRunnables(
                                 rag_prompt_template = ChatPromptTemplate.from_template(PAPER_RAG_PROMPT),
                                 vector_store = get_vector_store(paper_documents, EMBEDDING_MODEL, emb_dim=384, collection_name='paper_collection'),
@@ -132,14 +143,24 @@ def compile_analysis_graph():
     graph.add_edge("Visualisation", "Supervisor")
 
     def next_step(state):
-        # Truncate messages before deciding on the next step to keep the token count manageable
+        # Truncate messages to keep the token count manageable
         state["messages"] = truncate_messages(state["messages"])
-        return state['next']
-
+        
+        # Supervisor decides the next step based on state['next']
+        if "next" in state:
+            if state["next"] in {"ScholarQuery", "LocalInformationRetriever", "FINISH"}:
+                return state["next"]
+        # If 'next' isn't set, return a default behavior (could be research or scholar query)
+        return "FINISH"
+    
     graph.add_conditional_edges(
         "Supervisor",
         next_step,
-        {"ScholarQuery": "Query", "LocalInformationRetriever": "Research", "FINISH": END},
+        {
+            "ScholarQuery": "Query", 
+            "LocalInformationRetriever": "Research", 
+            "FINISH": END
+         },
     )
 
     graph.set_entry_point("Visualisation")

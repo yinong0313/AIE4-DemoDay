@@ -1,5 +1,10 @@
 import streamlit as st
 
+# Sidebar navigation
+# st.sidebar.page_link('Home.py', label='Home')
+# st.sidebar.page_link('pages/1_Literature_Research.py', label='Literature Research')
+# st.sidebar.page_link('pages/2_Data_Analysis.py', label='Data Analysis')
+
 # Global storage for API key using session state
 if "openai_api_key" not in st.session_state:
     st.session_state["openai_api_key"] = None
