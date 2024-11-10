@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 
 # Sidebar navigation
@@ -9,7 +10,7 @@ import streamlit as st
 if "openai_api_key" not in st.session_state:
     st.session_state["openai_api_key"] = None
 
-st.title("Welcome to Research Pilot")
+st.title("Welcome to LitPilot")
 
 # API Key input on the welcome page
 openai_api_key = st.text_input("Enter your OpenAI API Key to proceed:", type="password")
@@ -17,4 +18,5 @@ openai_api_key = st.text_input("Enter your OpenAI API Key to proceed:", type="pa
 
 if openai_api_key:
     st.session_state["openai_api_key"] = openai_api_key
+    os.environ['OPENAI_API_KEY'] = st.session_state["openai_api_key"]
     st.success("API key received!")
